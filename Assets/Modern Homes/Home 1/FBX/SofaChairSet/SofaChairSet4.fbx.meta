@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 2ef7600f392df954291ef46e777d4024
+timeCreated: 1477121951
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SofaChairSet4_BarcaChair
+    100004: SofaChairSet4_Carpet
+    100006: SofaChairSet4_Chair
+    100008: SofaChairSet4_Chair 1
+    100010: SofaChairSet4_Chair2
+    100012: SofaChairSet4_Chair2Metals
+    100014: SofaChairSet4_Chair2Wood
+    100016: SofaChairSet4_ChairPillow
+    100018: SofaChairSet4_LegRest
+    100020: SofaChairSet4_LegRest 1
+    100022: SofaChairSet4_LegRestMetal
+    100024: SofaChairSet4_Pillow1
+    100026: SofaChairSet4_Pillow2
+    100028: SofaChairSet4_Sofa
+    100030: SofaChairSet4_Sofa 1
+    100032: SofaChairSet4_SofaPillow
+    100034: SofaChairSet4_Table
+    100036: SofaChairSet4_TableGlass
+    100038: SofaChairSet4_TableMetal
+    400000: //RootNode
+    400002: SofaChairSet4_BarcaChair
+    400004: SofaChairSet4_Carpet
+    400006: SofaChairSet4_Chair
+    400008: SofaChairSet4_Chair 1
+    400010: SofaChairSet4_Chair2
+    400012: SofaChairSet4_Chair2Metals
+    400014: SofaChairSet4_Chair2Wood
+    400016: SofaChairSet4_ChairPillow
+    400018: SofaChairSet4_LegRest
+    400020: SofaChairSet4_LegRest 1
+    400022: SofaChairSet4_LegRestMetal
+    400024: SofaChairSet4_Pillow1
+    400026: SofaChairSet4_Pillow2
+    400028: SofaChairSet4_Sofa
+    400030: SofaChairSet4_Sofa 1
+    400032: SofaChairSet4_SofaPillow
+    400034: SofaChairSet4_Table
+    400036: SofaChairSet4_TableGlass
+    400038: SofaChairSet4_TableMetal
+    2300000: SofaChairSet4_Carpet
+    2300002: SofaChairSet4_Chair 1
+    2300004: SofaChairSet4_Chair2
+    2300006: SofaChairSet4_Chair2Metals
+    2300008: SofaChairSet4_Chair2Wood
+    2300010: SofaChairSet4_ChairPillow
+    2300012: SofaChairSet4_LegRest 1
+    2300014: SofaChairSet4_LegRestMetal
+    2300016: SofaChairSet4_Pillow1
+    2300018: SofaChairSet4_Pillow2
+    2300020: SofaChairSet4_Sofa 1
+    2300022: SofaChairSet4_SofaPillow
+    2300024: SofaChairSet4_TableGlass
+    2300026: SofaChairSet4_TableMetal
+    3300000: SofaChairSet4_Carpet
+    3300002: SofaChairSet4_Chair 1
+    3300004: SofaChairSet4_Chair2
+    3300006: SofaChairSet4_Chair2Metals
+    3300008: SofaChairSet4_Chair2Wood
+    3300010: SofaChairSet4_ChairPillow
+    3300012: SofaChairSet4_LegRest 1
+    3300014: SofaChairSet4_LegRestMetal
+    3300016: SofaChairSet4_Pillow1
+    3300018: SofaChairSet4_Pillow2
+    3300020: SofaChairSet4_Sofa 1
+    3300022: SofaChairSet4_SofaPillow
+    3300024: SofaChairSet4_TableGlass
+    3300026: SofaChairSet4_TableMetal
+    4300000: SofaChairSet4_Carpet
+    4300002: SofaChairSet4_TableMetal
+    4300004: SofaChairSet4_TableGlass
+    4300006: SofaChairSet4_ChairPillow
+    4300008: SofaChairSet4_Chair
+    4300010: SofaChairSet4_SofaPillow
+    4300012: SofaChairSet4_Sofa
+    4300014: SofaChairSet4_LegRest
+    4300016: SofaChairSet4_Pillow2
+    4300018: SofaChairSet4_LegRestMetal
+    4300020: SofaChairSet4_Chair2
+    4300022: SofaChairSet4_Pillow1
+    4300024: SofaChairSet4_Chair2Metals
+    4300026: SofaChairSet4_Chair2Wood
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

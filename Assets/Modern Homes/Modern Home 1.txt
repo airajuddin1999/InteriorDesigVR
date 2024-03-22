@@ -1,0 +1,23 @@
+Modern Home 3 Pack contains the following folder
+- Exterior
+- Home 3
+- Prefabs
+- Scene
+
+The Exterior folder consists of the following folders
+- Materials 	- Consists of all the material for the exterior used in the pack
+- Mesh 		- Consists of the FBXs for exterior used  in the pack
+- Textures 		- Consists of all the texture maps for the exterior used in the pack
+
+The Home 3 folder consists of the following folders
+- FBX		- Consists of all the FBXs used in the Home 3 pack
+- Materials 	- Consists of all the material for Home 3 used in the pack
+- PNG Textures	- Consists of all the Original texture with respective maps
+- Textures 		- Consists of all the texture maps for the Home 3 used in the pack
+
+The Prefabs folder consists of the following
+- Consists of Prefabs of the assests used.
+
+The Scenes folder consists of the following
+- W450_ReflectionProbes folder - Consists of all the Reflection Probes/Cubemaps for Home 3 used in the pack
+- Also includes a save file of Modern Home 3
