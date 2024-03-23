@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class VRButton : MonoBehaviour
+public class VRButton : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler
 {
     public bool isHover;
     public KeyCode actionKey = KeyCode.X;
@@ -34,5 +35,16 @@ public class VRButton : MonoBehaviour
     public void ChangeHoverState(bool value)
     {
         isHover = value;
+    }
+
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        ChangeHoverState(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        ChangeHoverState(false);
     }
 }

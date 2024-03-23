@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Prototype Scene/Scene/Interior Design Prototype.unity
-    guid: 802e1e47e7df6de4ca9aad1cf905ba88
+    path: Assets/Modern Homes/Scenes/Modern Home 2.unity
+    guid: 1ce71e1a00449c54da9020cad51d8dde
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 98d84a0b0b31a594399254a6b1301f24, type: 2}
