@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Interactable))]
 public class DoorInteraction : MonoBehaviour
 {
     public bool focused = false;
@@ -20,18 +21,22 @@ public class DoorInteraction : MonoBehaviour
     public AudioClip doorOpenSound;
     public AudioClip doorCloseSound;
 
+    Interactable interactable;
+
     void Start()
     {
         outline = this.GetComponent<Outline>();
         animator = this.GetComponent<Animator>();
 
         if (outline) outline.enabled = false;
+
+        interactable = this.GetComponent<Interactable>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(canOpened && focused)
+        if(canOpened && interactable.isHover)
         {
             if(Input.GetKeyDown(KeyCode.X))
             {
@@ -41,6 +46,8 @@ public class DoorInteraction : MonoBehaviour
                 Invoke("CloseDoor", 4);
             }
         }
+
+        if (outline) outline.enabled = interactable.isHover;
     }
 
 
@@ -54,7 +61,7 @@ public class DoorInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && !isOpen && focused)
+        if(other.tag == "Player" && !isOpen && interactable.isHover)
         {
             canOpened = true;
             UI_Text1.SetActive(true);
@@ -73,10 +80,5 @@ public class DoorInteraction : MonoBehaviour
         }
     }
 
-    public void SetFocus(bool value)
-    {
-        focused = value;
-
-        if (outline) outline.enabled = value;
-    }
+    
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Outline))]
-public class FloorInteraction : MonoBehaviour
+[RequireComponent(typeof(Interactable))]
+public class FloorInteraction : MonoBehaviour 
 {
     [System.Serializable]
     public class DifferentTextures
@@ -25,6 +26,7 @@ public class FloorInteraction : MonoBehaviour
     Outline outline;
     MeshRenderer meshRenderer;
     Material mat;
+    Interactable interactable;
 
 
     void Start()
@@ -32,18 +34,21 @@ public class FloorInteraction : MonoBehaviour
         outline = this.GetComponent<Outline>();
         meshRenderer = this.GetComponent<MeshRenderer>();
         mat = meshRenderer.material;
+        interactable = this.GetComponent<Interactable>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(focused)
+        if(interactable.isHover)
         {
             if(Input.GetKeyDown(KeyCode.X))
             {
                 ChangeTexture();
             }
         }
+
+        if (outline) outline.enabled = interactable.isHover;
     }
 
 
@@ -54,14 +59,6 @@ public class FloorInteraction : MonoBehaviour
         mat.mainTexture = textures[currentTex].tex;
         mat.mainTextureScale = textures[currentTex].tiling;
         if (changeSound) AudioSource.PlayClipAtPoint(changeSound, this.transform.position);
-    }
-
-
-    public void SetFocus(bool value)
-    {
-        focused = value;
-
-        if (outline) outline.enabled = value;
     }
 
 

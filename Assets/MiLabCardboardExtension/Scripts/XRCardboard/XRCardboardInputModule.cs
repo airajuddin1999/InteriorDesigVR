@@ -21,7 +21,7 @@ public class XRCardboardInputModule : PointerInputModule
     UnityEvent onClick = default;
 
     PointerEventData pointerEventData;
-    GameObject currentTarget;
+    public GameObject currentTarget;
     float currentTargetClickTime = float.MaxValue;
     bool hovering;
 

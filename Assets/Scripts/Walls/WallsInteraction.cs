@@ -6,7 +6,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Outline))]
-public class WallsInteraction : MonoBehaviour , IPointerEnterHandler , IPointerExitHandler
+[RequireComponent(typeof(Interactable))]
+public class WallsInteraction : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler
 {
 
     public bool focused;
@@ -27,7 +28,7 @@ public class WallsInteraction : MonoBehaviour , IPointerEnterHandler , IPointerE
 
     public AudioClip changeSound;
    
-    public GameObject[] canvasToDisplay;
+    public GameObject canvasToDisplay;
     public GameObject Player;
 
 
@@ -39,6 +40,17 @@ public class WallsInteraction : MonoBehaviour , IPointerEnterHandler , IPointerE
     MeshRenderer meshRenderer;
     Material mat;
 
+    public float distance = 2f;
+
+
+    public float TimeToDeselect = 5f;
+    float currentTime = 0.0f;
+   
+
+    Ray myRay;      // initializing the ray
+    RaycastHit hit; // initializing the raycasthit
+    Interactable interactable;
+
 
 
     void Start()
@@ -46,12 +58,15 @@ public class WallsInteraction : MonoBehaviour , IPointerEnterHandler , IPointerE
         outline = this.GetComponent<Outline>();
         meshRenderer = this.GetComponent<MeshRenderer>();
         mat = meshRenderer.material;
+        interactable = this.GetComponent<Interactable>();
+
+        //objectsToHide = this.transform.GetComponentsInChildren<GameObject>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (focused)
+        if (interactable.isHover)
         {
             if (Input.GetKeyDown(KeyCode.X) && !isSelected)
             {
@@ -60,15 +75,25 @@ public class WallsInteraction : MonoBehaviour , IPointerEnterHandler , IPointerE
             }
         }
 
-        foreach (GameObject canvas in canvasToDisplay)
+        if (canvasToDisplay.activeInHierarchy)
         {
-            if (canvas.activeInHierarchy)
-            {
-                canvas.transform.LookAt(Player.transform.position);
-                canvas.transform.localEulerAngles = new Vector3(0, canvas.transform.localEulerAngles.y, 0.0f);
-            }
+            canvasToDisplay.transform.LookAt(Player.transform.position);
+            canvasToDisplay.transform.localEulerAngles = new Vector3(0, canvasToDisplay.transform.localEulerAngles.y, 0.0f);
         }
+            
         
+
+        if (outline) outline.enabled = interactable.isHover;
+
+        if (!interactable.isHover && canvasToDisplay.activeInHierarchy)
+        {
+            currentTime+= Time.deltaTime;
+            if(currentTime > TimeToDeselect)
+            {
+                SelectWall(false);
+                currentTime = 0.0f;
+            }
+        } 
     }
 
 
@@ -81,10 +106,12 @@ public class WallsInteraction : MonoBehaviour , IPointerEnterHandler , IPointerE
     {
         isSelected = value;
 
-        foreach (GameObject canvas in canvasToDisplay)
-        {
-            canvas.SetActive(value);
-        }
+        
+            canvasToDisplay.SetActive(value);
+            myRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+            canvasToDisplay.transform.position = myRay.GetPoint(distance);
+        
 
         outline.OutlineColor = (value) ?Color.blue : Color.white;
 
@@ -123,24 +150,13 @@ public class WallsInteraction : MonoBehaviour , IPointerEnterHandler , IPointerE
         if (changeSound) AudioSource.PlayClipAtPoint(changeSound, this.transform.position);
     }
 
-    public void SetFocus(bool value)
+    public void OnPointerExit(PointerEventData eventData)
     {
-        focused = value;
-
-        if (outline) outline.enabled = value;
+        throw new NotImplementedException();
     }
-
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        SetFocus(true);
+        throw new NotImplementedException();
     }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        SetFocus(false);
-        SelectWall(false);
-    }
-
-
 }

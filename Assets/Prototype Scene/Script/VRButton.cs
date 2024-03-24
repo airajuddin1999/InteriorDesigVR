@@ -8,6 +8,7 @@ public class VRButton : MonoBehaviour , IPointerEnterHandler, IPointerExitHandle
 {
     public bool isHover;
     public KeyCode actionKey = KeyCode.X;
+    public bool isHold;
 
     public UnityEvent actionEvent;
     AudioClip clip;
@@ -19,16 +20,36 @@ public class VRButton : MonoBehaviour , IPointerEnterHandler, IPointerExitHandle
     // Update is called once per frame
     void Update()
     {
-        if(isHover && Input.GetKeyDown(actionKey))
+        if (!isHold)
         {
-            AudioSource.PlayClipAtPoint(clip, this.transform.position);
-            actionEvent.Invoke();
+            if (isHover && Input.GetKeyDown(actionKey))
+            {
+                AudioSource.PlayClipAtPoint(clip, this.transform.position);
+                actionEvent.Invoke();
+            }
+
+
+            if (isHover && Input.GetButtonDown("Fire3"))
+            {
+                AudioSource.PlayClipAtPoint(clip, this.transform.position);
+                actionEvent.Invoke();
+            }
         }
 
-        if(isHover && Input.GetButtonDown("Fire3"))
+        else
         {
-            AudioSource.PlayClipAtPoint(clip, this.transform.position);
-            actionEvent.Invoke();
+            if (isHover && Input.GetKey(actionKey))
+            {
+              
+                actionEvent.Invoke();
+            }
+
+
+            if (isHover && Input.GetButton("Fire3"))
+            {
+               
+                actionEvent.Invoke();
+            }
         }
     }
 
@@ -47,4 +68,6 @@ public class VRButton : MonoBehaviour , IPointerEnterHandler, IPointerExitHandle
     {
         ChangeHoverState(false);
     }
+
+
 }
