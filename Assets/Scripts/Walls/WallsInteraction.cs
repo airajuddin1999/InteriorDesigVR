@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Outline))]
 [RequireComponent(typeof(Interactable))]
-public class WallsInteraction : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler
+public class WallsInteraction : MonoBehaviour 
 {
 
     public bool focused;
@@ -150,13 +150,7 @@ public class WallsInteraction : MonoBehaviour , IPointerEnterHandler, IPointerEx
         if (changeSound) AudioSource.PlayClipAtPoint(changeSound, this.transform.position);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        throw new NotImplementedException();
-    }
+  
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        throw new NotImplementedException();
-    }
+    
 }
