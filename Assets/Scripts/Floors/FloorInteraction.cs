@@ -58,6 +58,7 @@ public class FloorInteraction : MonoBehaviour
         if (currentTex > textures.Length-1) currentTex = 0;
         mat.mainTexture = textures[currentTex].tex;
         mat.mainTextureScale = textures[currentTex].tiling;
+        mat.color = Color.white;
         if (changeSound) AudioSource.PlayClipAtPoint(changeSound, this.transform.position);
     }
 

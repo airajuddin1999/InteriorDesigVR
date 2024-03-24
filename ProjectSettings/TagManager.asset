@@ -10,28 +10,9 @@ TagManager:
   - Ignore Ragdoll
   - Boss
   - Enemy
-  - CompanionAI
-  - Weapon
-  - PlayerUI
-  - Collectable
-  - LookAt
-  - Interactable
-  - Dirt
-  - Wood
-  - Metal
-  - Concrete
   - Glass
-  - Item
-  - Water
-  - LadderTrigger
-  - Cover
-  - ExitWater
-  - Barrel
-  - FreeClimb
-  - ClimbDirection
-  - Zipline
-  - Ground
   - Wall
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -40,7 +21,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - InteractRaycast
   - Player
   - Enemy
   - CompanionAI

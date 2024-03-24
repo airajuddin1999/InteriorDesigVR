@@ -50,6 +50,7 @@ public class SofaInteraction : MonoBehaviour
         meshRenderer = this.GetComponent<MeshRenderer>();
         mat = meshRenderer.material;
         interactable = this.GetComponent<Interactable>();
+        if (!Player) Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame

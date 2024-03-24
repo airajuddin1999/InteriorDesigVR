@@ -24,7 +24,8 @@ public class FurnitureInteraction : MonoBehaviour
     Rigidbody rb;
 
     TMP_Text currentSelectedText;
-    
+    RaycastHit hit;
+
     void Start()
     {
         outline = this.GetComponent<Outline>();
