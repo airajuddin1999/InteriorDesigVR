@@ -41,9 +41,8 @@ public class KitchenBenchAnim : MonoBehaviour
                 canvas.transform.localEulerAngles = new Vector3(canvas.transform.localEulerAngles.x, canvas.transform.localEulerAngles.y, 0.0f);
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                if (Input.GetKeyDown(KeyCode.X))
+           
+                if (Input.GetKeyDown(KeyCode.X) || Input.GetButtonDown("jsX"))
                 {
                     isOpen = !isOpen;
                     mainAnimator.SetBool(param, isOpen);
@@ -52,7 +51,7 @@ public class KitchenBenchAnim : MonoBehaviour
                     if (isOpen)
                         Invoke("CloseItem", 4);
                 }
-            }
+            
 
 
 

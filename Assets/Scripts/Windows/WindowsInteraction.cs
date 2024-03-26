@@ -45,9 +45,9 @@ public class WindowsInteraction : MonoBehaviour
                 canvas.transform.localEulerAngles = new Vector3(canvas.transform.localEulerAngles.x, canvas.transform.localEulerAngles.y, 0.0f);
             }
 
-            if(Input.GetKeyDown(KeyCode.X))
-            {
-                if (Input.GetKeyDown(KeyCode.X))
+           
+            
+                if (Input.GetKeyDown(KeyCode.X) || Input.GetButtonDown("jsX"))
                 {
                     rightFrameAnim.SetBool("isOpen", !isOpen);
                     leftFrameAnim.SetBool("isOpen", !isOpen);
@@ -56,7 +56,7 @@ public class WindowsInteraction : MonoBehaviour
                     if(isOpen)
                     Invoke("CloseDoor", 4);
                 }
-            }
+            
             
 
             

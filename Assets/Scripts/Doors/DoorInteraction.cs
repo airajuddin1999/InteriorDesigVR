@@ -38,7 +38,7 @@ public class DoorInteraction : MonoBehaviour
     {
         if(canOpened && interactable.isHover)
         {
-            if(Input.GetKeyDown(KeyCode.X))
+            if(Input.GetKeyDown(KeyCode.X) || Input.GetButtonDown("jsX"))
             {
                 animator.SetBool("OpenDoor", !isOpen);
                 isOpen = true;

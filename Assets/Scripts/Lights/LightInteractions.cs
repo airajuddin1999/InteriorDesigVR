@@ -27,7 +27,7 @@ public class LightInteractions : MonoBehaviour
     {
         if (interactable.isHover)
         {
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.X) || Input.GetButtonDown("jsX"))
             {
                 lightOn = !lightOn;
                 LightObject.SetActive(lightOn);

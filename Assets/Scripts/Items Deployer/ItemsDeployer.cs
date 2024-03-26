@@ -26,7 +26,7 @@ public class ItemsDeployer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Y))
+        if(Input.GetKeyDown(KeyCode.Y) || Input.GetButtonDown("jsY"))
         {
             if(currentArea == "DrawingRoom")
             {
@@ -37,7 +37,7 @@ public class ItemsDeployer : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B)  || Input.GetButtonDown("jsB"))
         {
             if (currentSelected && CheckRay())
             {

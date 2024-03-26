@@ -58,7 +58,7 @@ public class SofaInteraction : MonoBehaviour
     {
         if (interactable.isHover)
         {
-            if (Input.GetKeyDown(KeyCode.X) && !isSelected)
+            if ((Input.GetKeyDown(KeyCode.X) || Input.GetButtonDown("jsX")) && !isSelected)
             {
                 SelectSofa(true);
                 //ChangeTexture();

@@ -7,15 +7,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Outline))]
 public class MainMenu : MonoBehaviour
 {
-    public Animator mainAnimator;
-    public string param;
-
     
-
-    public bool isOpen = false;
-
-    Interactable interactable;
-    Outline outline;
     void Start()
     {
         

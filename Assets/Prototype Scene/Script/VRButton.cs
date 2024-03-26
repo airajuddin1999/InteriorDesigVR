@@ -22,14 +22,14 @@ public class VRButton : MonoBehaviour , IPointerEnterHandler, IPointerExitHandle
     {
         if (!isHold)
         {
-            if (isHover && Input.GetKeyDown(actionKey))
+            if (isHover && (Input.GetKeyDown(actionKey) || Input.GetButtonDown("jsX")))
             {
                 AudioSource.PlayClipAtPoint(clip, this.transform.position);
                 actionEvent.Invoke();
             }
 
 
-            if (isHover && Input.GetButtonDown("Fire3"))
+            if (isHover && (Input.GetButtonDown("Fire3") || Input.GetButtonDown("jsX")))
             {
                 AudioSource.PlayClipAtPoint(clip, this.transform.position);
                 actionEvent.Invoke();
@@ -38,14 +38,14 @@ public class VRButton : MonoBehaviour , IPointerEnterHandler, IPointerExitHandle
 
         else
         {
-            if (isHover && Input.GetKey(actionKey))
+            if (isHover && (Input.GetKey(actionKey) || Input.GetButtonDown("jsX")))
             {
               
                 actionEvent.Invoke();
             }
 
 
-            if (isHover && Input.GetButton("Fire3"))
+            if (isHover && (Input.GetButton("Fire3")|| Input.GetButtonDown("jsX")))
             {
                
                 actionEvent.Invoke();
